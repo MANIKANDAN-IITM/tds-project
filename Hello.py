@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import streamlit as st
+""" import streamlit as st
 from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
@@ -29,7 +29,7 @@ def run():
     st.sidebar.success("Select a demo above.")
 
     st.markdown(
-        """
+        
         Streamlit is an open-source app framework built specifically for
         Machine Learning and Data Science projects.
         **👈 Select a demo from the sidebar** to see some examples
@@ -43,9 +43,24 @@ def run():
         - Use a neural net to [analyze the Udacity Self-driving Car Image
           Dataset](https://github.com/streamlit/demo-self-driving)
         - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
+    
     )
 
 
 if __name__ == "__main__":
-    run()
+    run()"""
+
+import streamlit as st
+
+st.title('Find the Largest Number')
+
+# Input numbers
+num1 = st.number_input('Enter the first number', value=0)
+num2 = st.number_input('Enter the second number', value=0)
+num3 = st.number_input('Enter the third number', value=0)
+
+# Button to find the largest number
+if st.button('Find the Largest Number'):
+    largest_num = max(num1, num2, num3)
+    st.write('The largest number is ', largest_num)
+
